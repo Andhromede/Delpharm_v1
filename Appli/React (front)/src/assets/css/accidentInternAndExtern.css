@@ -1,0 +1,126 @@
+.circle1 {
+    min-height: 50%;
+    min-width: 45%;
+    border-radius: 37% 63% 47% 53% / 73% 37% 63% 27%;
+}
+
+.circle2 {
+    height: 50%;
+    min-width: 45%;
+    /* border-radius: 35% 72% 53% 68% /35% 50% 45% 59%; */
+    border-radius: 41% 59% 59% 41% / 47% 57% 43% 53%;
+}
+
+.circle3 {
+    min-height: 50%;
+    min-width: 45%;
+    /* border-radius: 77% 33% 77% 80% / 63% 37% 93% 57%; */
+    border-radius: 41% 59% 67% 33% / 64% 42% 58% 36% ;
+}
+
+.circle4 {
+    min-height: 50%;
+    min-width: 45%;
+    /* border-radius: 17% 83% 67% 33% / 73% 39% 61% 27% ; */
+    border-radius: 35% 65% 77% 23% / 49% 47% 53% 51% ;
+}
+
+.circle5 {
+    min-height: 50%;
+    min-width: 45%;
+    /* border-radius: 46% 54% 68% 32% / 66% 58% 42% 34%; */
+    border-radius: 25% 75% 67% 33% / 50% 50% 50% 50% ;
+}
+
+.circle6{
+    min-height: 50%;
+    min-width: 45%;
+    border-radius: 14% 86% 24% 76% / 87% 34% 66% 13% ;
+}
+
+.trashButton{
+    border-radius:50%;
+    height: 2.5em;
+    width: 2.5em;
+    margin-top: 2em;
+}
+
+.radius50 {
+    border-radius: 50%;
+}
+
+.bouton {
+    height: 90px;
+    width: 90px;
+}
+
+.trashButton2{
+    border-radius:50%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+
+/* @media (min-width: 650px) and (max-width: 800px) {
+    .circle {
+        height: 50vh;
+        width: 55vw;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 650px) {
+    .circle {
+        height: 50vh;
+        width: 75vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .circle {
+        height: 50vh;
+        width: 90vw;
+    }
+} */
+
+
+
+
+.radius50 {
+    border-radius: 50%;
+}
+
+.bouton {
+    height: 90px;
+    width: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

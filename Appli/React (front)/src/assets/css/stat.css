@@ -1,0 +1,120 @@
+.body{
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+    color: var(--blanc);
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+    letter-spacing: 0.1em;
+    margin: 1em 0em 1em 0em;
+}
+
+.button3 {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    color: black!important;
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+    letter-spacing: 0.1em;
+}
+.button3:hover {
+    box-shadow: inset 5px 5px 5px rgb(85, 85, 85);
+}
+
+/* ********************************* RIGHT BUTTON EFFECT *********************************** */
+/*******************************************************************************************/
+.roll-in-right {
+	-webkit-animation: roll-in-right 1.5s ease-out both;
+	        animation: roll-in-right 1.5s ease-out both;
+}
+
+@-webkit-keyframes roll-in-right {
+    0% {
+      -webkit-transform: translateX(800px) rotate(540deg);
+              transform: translateX(800px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-right {
+    0% {
+      -webkit-transform: translateX(800px) rotate(540deg);
+              transform: translateX(800px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+
+/********************************** LEFT BUTTON EFFECT ************************************/
+/******************************************************************************************/
+  .roll-in-left {
+	-webkit-animation: roll-in-left 1.5s ease-out both;
+	        animation: roll-in-left 1.5s ease-out both;
+}
+
+@-webkit-keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+    /* -------------------
+Media Queries
+-------------------- */
+@media screen and (max-width: 450px) {
+  .graphMobile{
+    width: auto!important;
+  }
+  .buttonGraphMobile{
+    display: inline-block;
+  }
+}
+@media (min-width: 768px)  and (max-width: 1023px) {
+  .graphMobile{
+    width: auto!important;
+  }
+  .buttonGraphMobile{
+    width: 42em!important;
+    margin-left: 0em!important;
+  }
+}
+@media (min-width: 1024px)  and (max-width: 1439px) {
+  .graphMobile{
+    width: auto!important;
+  }
+  .graphTablette{
+    width: 30em!important;
+  }
+  .buttonGraphMobile{
+    width: 60em!important;
+    margin-left: 0em!important;
+  }
+}

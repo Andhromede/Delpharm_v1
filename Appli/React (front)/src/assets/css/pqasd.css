@@ -1,0 +1,123 @@
+/* --------------------------------************CSS FORMULAIRE PQA ***********--------------------------------*/
+.body{
+    min-height: 100vh;
+}
+
+#radius1 {
+    min-height: 50%;
+    min-width: 50%;
+    border-radius:51% 49% 47% 53% / 13% 10% 90% 87%  ;
+}
+
+#radius2 {
+    height: 50%;
+    min-width: 50%;
+    border-radius: 41% 59% 67% 33% / 64% 42% 58% 36% ;
+}
+
+#radius3 {
+    min-height: 50%;
+    min-width: 50%;
+    border-radius: 74% 26% 72% 28% / 17% 76% 24% 83% ;
+}
+
+.button{
+    border-radius:50%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.button2 {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    font-size: small;
+    
+}
+.button2:hover {
+    box-shadow: inset 5px 5px 5px rgb(85, 85, 85);
+}
+
+.warning{
+    font-size: 0.8em;
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+}
+.textArea1{
+    resize: none;
+    width: 420px;
+    height: 125px;
+}
+
+.iconsForm{
+   font-size: 2em;
+   color: tomato;
+}
+ .cadre{
+    margin-bottom: 3em;
+ }
+ ::placeholder {
+    font-style: italic!important;  
+ }
+
+
+ /* -------------------
+Media Queries
+-------------------- */
+@media screen and (max-width: 450px) {
+    .inputForm{
+        max-width: auto;
+    }
+    .textArea1{
+        resize: none;
+        width: 10em;
+    }
+    .buttonForm{
+        margin-top: 3em!important;
+        margin-bottom: 3em!important;
+    }
+    .buttonForm2{
+        margin-top: 3em!important;
+        margin-bottom: 6em!important;
+    }
+    #radius1{
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0% !important;
+    }
+    #radius2{
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0% !important;
+    }
+    #radius3{
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0% !important;
+    }
+ }
+ @media (min-width: 768px)  and (max-width: 1023px) {
+    .textArea1{
+        resize: none;
+        width: 90%;
+    }
+    .inputForm{
+        max-width: auto;
+    }
+    .buttonForm{
+        margin-top: 3em!important;
+        margin-bottom: 3em!important;
+    }
+    .buttonForm2{
+        margin-top: 3em!important;
+        margin-bottom: 6em!important;
+    }
+ }
+
+ @media (min-width: 1024px)  and (max-width: 1439px) {
+    .buttonForm{
+        margin-top: 3em!important;
+        margin-bottom: 3em!important;
+    }
+    .buttonForm2{
+        margin-top: 3em!important;
+        margin-bottom: 6em!important;
+    }
+    .textArea1{
+        resize: none;
+        width: 90%;
+    }
+ }

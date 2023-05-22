@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DelpharmApi.Models.Action" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIDAAQAQEAggAAQgAEBIAACAABgAAAAAAEAAQABLCA=</HashCode>
+      <FileName>Models\Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Rapport" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQLIAQEYQIEBAAAIAEAEgEBEAAgAAAJQAAIIQQAACE=</HashCode>
+      <FileName>Models\Rapport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Utilisateur" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACDIAAAECAAIBAQACIAAAAAAiARAAADAKgAIQgBAAA=</HashCode>
+      <FileName>Models\Utilisateur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.RapportUtilisateur" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiABAQIAAAgAAAQCAgAAAIAAEgAAAABEAAAAwAgAA=</HashCode>
+      <FileName>Models\RapportUtilisateur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Contrat" Collapsed="true">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Contrat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Poste" Collapsed="true">
+    <Position X="6.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Poste.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Role" Collapsed="true">
+    <Position X="9.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Csp" Collapsed="true">
+    <Position X="11.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAACCAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Csp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.UtilisateurAction" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABQAAAAAAAAAgCAAAAAAAAEAAAAABEAAAAAAgAA=</HashCode>
+      <FileName>Models\UtilisateurAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.ModeInformation" Collapsed="true">
+    <Position X="19.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\ModeInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Fonction" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIQABAAA=</HashCode>
+      <FileName>Models\Fonction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Cote" Collapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Cote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Criticite" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAACCAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Criticite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Departement" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Departement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Equipement" Collapsed="true">
+    <Position X="12.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAIAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Equipement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.EquipementRapport" Collapsed="true">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAoAAgAAAACAAAgAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\EquipementRapport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Etat" Collapsed="true">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Etat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Fichesante" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACBAAQAAAAgAAAAAgQEAAQAAAgIAEAAAAAAQAAIAA=</HashCode>
+      <FileName>Models\Fichesante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Fichier" Collapsed="true">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgACAAAAAAAAAACAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Fichier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Materiel" Collapsed="true">
+    <Position X="8.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Materiel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Priorite" Collapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAACCAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Priorite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.RapportMateriel" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAQAwAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Models\RapportMateriel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.RapportSecour" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAgAAAAAAAAAAAAAAgAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\RapportSecour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.RapportTrauma" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAAAAgAAAAIAAQAAAAAAhQAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\RapportTrauma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Secour" Collapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQQAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Secour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Service" Collapsed="true">
+    <Position X="0.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAQIEAAAAAAAAAAAAAAACCAAAAAAAAAAQAAIAA=</HashCode>
+      <FileName>Models\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Siegelesion" Collapsed="true">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Siegelesion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Traumatisme" Collapsed="true">
+    <Position X="10.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Traumatisme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Type" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAACCAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Type.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DelpharmApi.Models.Typeat" Collapsed="true">
+    <Position X="17.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Typeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

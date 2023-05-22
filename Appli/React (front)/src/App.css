@@ -1,0 +1,324 @@
+/********************************** GENERAL **********************************/
+/*****************************************************************************/
+ 
+   body {
+      /****** VARIABLES DE COULEURS ******/
+      --vert: #017278;
+      --blanc: #EBEBEB;
+      --gris: #444;
+
+      /****** MARGIN / PADDING ******/
+      margin: 0px;
+      padding: 0px;
+
+      /****** BG ******/
+      background-color: var(--vert);
+      /* width: 100%; */
+      --background: rgb(236, 234, 234);
+   }
+
+
+/********************************* BG COLORS *********************************/
+/*****************************************************************************/
+   .bgBlanc {
+      background-color: var(--blanc);
+   }
+
+   .bgVert {
+      background-color: var(--vert);
+   }
+
+
+/********************************* TEXT COLORS *********************************/
+/*****************************************************************************/
+   .txtBlanc {
+      color: var(--blanc);
+   }
+
+   .txtVert {
+      color: var(--vert);
+   }
+
+   .txtGris {
+      color: var(--gris);
+   }
+
+
+/********************************* BG GENERAL *********************************/
+/*****************************************************************************/
+   .background-radial-gradient {
+      background-color: 004346(218, 41%, 15%);
+      background-image: radial-gradient(650px circle at 0% 0%,
+            hsl(186, 41%, 35%) 15%,
+            hsl(186, 41%, 30%) 35%,
+            hsl(186, 41%, 20%) 75%,
+            hsl(186, 41%, 19%) 80%,
+            transparent 100%),
+         radial-gradient(1250px circle at 100% 100%,
+            hsl(186, 41%, 45%) 15%,
+            hsl(186, 41%, 30%) 35%,
+            hsl(186, 41%, 20%) 75%,
+            hsl(186, 41%, 19%) 80%,
+            transparent 100%);
+   }
+
+
+   .template{
+      display: none;
+   }
+
+
+/********************************* RIGHT BUTTON EFFECT *************************************/
+/*******************************************************************************************/
+.bounce-in-right {
+    -webkit-animation: bounce-in-right 1.5s both;
+    animation: bounce-in-right 1.5s both;
+}
+
+@-webkit-keyframes bounce-in-right {
+    0% {
+        -webkit-transform: translateX(600px);
+        transform: translateX(600px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateX(68px);
+        transform: translateX(68px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateX(32px);
+        transform: translateX(32px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes bounce-in-right {
+    0% {
+        -webkit-transform: translateX(600px);
+        transform: translateX(600px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateX(68px);
+        transform: translateX(68px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateX(32px);
+        transform: translateX(32px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+/********************************** LEFT BUTTON EFFECT ************************************/
+/******************************************************************************************/
+   .bounce-in-left {
+      -webkit-animation: bounce-in-left 1.5s both;
+      animation: bounce-in-left 1.5s both;
+   }
+
+   @-webkit-keyframes bounce-in-left {
+      0% {
+         -webkit-transform: translateX(-600px);
+         transform: translateX(-600px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+         opacity: 0;
+      }
+
+      38% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+         opacity: 1;
+      }
+
+      55% {
+         -webkit-transform: translateX(-68px);
+         transform: translateX(-68px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      72% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+      }
+
+      81% {
+         -webkit-transform: translateX(-28px);
+         transform: translateX(-28px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      90% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+      }
+
+      95% {
+         -webkit-transform: translateX(-8px);
+         transform: translateX(-8px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      100% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+      }
+   }
+
+   @keyframes bounce-in-left {
+      0% {
+         -webkit-transform: translateX(-600px);
+         transform: translateX(-600px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+         opacity: 0;
+      }
+
+      38% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+         opacity: 1;
+      }
+
+      55% {
+         -webkit-transform: translateX(-68px);
+         transform: translateX(-68px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      72% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+      }
+
+      81% {
+         -webkit-transform: translateX(-28px);
+         transform: translateX(-28px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      90% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+      }
+
+      95% {
+         -webkit-transform: translateX(-8px);
+         transform: translateX(-8px);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      100% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+      }
+   }

@@ -1,0 +1,326 @@
+CREATE TABLE role(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE poste(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255) NOT NULL,
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE csp(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255) NOT NULL,
+   acronyme VARCHAR(50),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE siegeLesion(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE fonction(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE departement(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE contrat(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE equipement(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE traumatisme(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE type(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE typeAT(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE etat(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE criticite(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE priorite(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE secours(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_interne BOOLEAN,
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE mode_information(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE materiel(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   is_deleted BOOLEAN,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE cote(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(50),
+   acronyme VARCHAR(50),
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE service(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_interne BOOLEAN,
+   is_deleted BOOLEAN,
+   Id_departement INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_departement) REFERENCES departement(Id)
+);
+
+CREATE TABLE rapport(
+   Id INT AUTO_INCREMENT,
+   date_accident DATETIME,
+   date_rapport DATETIME,
+   motif_deplacement TEXT,
+   description_situation TEXT,
+   action_immediate TEXT,
+   occupation_victime TEXT,
+   comment TEXT,
+   pourquoi TEXT,
+   lieu VARCHAR(255),
+   materiel TEXT,
+   is_retour_poste BOOLEAN,
+   is_travail_leger BOOLEAN,
+   is_DU BOOLEAN,
+   is_RDP BOOLEAN,
+   is_rapport_police BOOLEAN,
+   is_deleted BOOLEAN,
+   Id_etat INT NOT NULL,
+   Id_type INT,
+   Id_service INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_etat) REFERENCES etat(Id),
+   FOREIGN KEY(Id_type) REFERENCES type(Id),
+   FOREIGN KEY(Id_service) REFERENCES service(Id)
+);
+
+CREATE TABLE action(
+   Id INT AUTO_INCREMENT,
+   titre VARCHAR(255),
+   date_creation DATETIME,
+   description TEXT,
+   reponse TEXT,
+   validation_hse DATETIME,
+   validation_pilote DATETIME,
+   validation_porteur DATETIME,
+   delai DATETIME,
+   is_immediate BOOLEAN,
+   is_deleted BOOLEAN,
+   Id_action INT,
+   Id_priorite INT NOT NULL,
+   Id_criticite INT NOT NULL,
+   Id_etat INT NOT NULL,
+   Id_rapport INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_action) REFERENCES action(Id),
+   FOREIGN KEY(Id_priorite) REFERENCES priorite(Id),
+   FOREIGN KEY(Id_criticite) REFERENCES criticite(Id),
+   FOREIGN KEY(Id_etat) REFERENCES etat(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE fichier(
+   Id INT AUTO_INCREMENT,
+   nom VARCHAR(255),
+   chemin VARCHAR(255),
+   is_deleted BOOLEAN,
+   Id_rapport INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE ficheSante(
+   Id INT AUTO_INCREMENT,
+   date_creation DATETIME,
+   debut_AT DATETIME,
+   fin_AT DATETIME,
+   duree_AT INT,
+   date_revision DATETIME,
+   medecin_travail VARCHAR(50),
+   proposition_medecin TEXT,
+   is_suivis BOOLEAN,
+   is_deleted BOOLEAN,
+   Id_rapport INT NOT NULL,
+   Id_typeAT INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_typeAT) REFERENCES typeAT(Id)
+);
+
+CREATE TABLE rapport_trauma(
+   Id INT AUTO_INCREMENT,
+   Id_cote INT NOT NULL,
+   Id_siegeLesion INT NOT NULL,
+   Id_traumatisme INT NOT NULL,
+   Id_rapport INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_cote) REFERENCES cote(Id),
+   FOREIGN KEY(Id_siegeLesion) REFERENCES siegeLesion(Id),
+   FOREIGN KEY(Id_traumatisme) REFERENCES traumatisme(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE utilisateur(
+   Id INT AUTO_INCREMENT,
+   matricule VARCHAR(255) NOT NULL,
+   sexe VARCHAR(50),
+   nom VARCHAR(255) NOT NULL,
+   prenom VARCHAR(255) NOT NULL,
+   email VARCHAR(255) NOT NULL,
+   password VARCHAR(255) NOT NULL,
+   telephone VARCHAR(15),
+   date_naissance DATETIME NOT NULL,
+   is_actif BOOLEAN,
+   is_UAP BOOLEAN,
+   is_chef BOOLEAN,
+   is_deleted BOOLEAN,
+   Id_service INT NOT NULL,
+   Id_contrat INT NOT NULL,
+   Id_csp INT,
+   Id_poste INT NOT NULL,
+   Id_role INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_service) REFERENCES service(Id),
+   FOREIGN KEY(Id_contrat) REFERENCES contrat(Id),
+   FOREIGN KEY(Id_csp) REFERENCES csp(Id),
+   FOREIGN KEY(Id_poste) REFERENCES poste(Id),
+   FOREIGN KEY(Id_role) REFERENCES role(Id)
+);
+
+CREATE TABLE rapport_utilisateur(
+   Id INT AUTO_INCREMENT,
+   Id_utilisateur INT,
+   Id_mode_information INT,
+   Id_fonction INT,
+   Id_rapport INT,
+   commentaire TEXT,
+   is_analyse_a_chaud BOOLEAN,
+   date_validation DATETIME,
+   is_intervenu BOOLEAN,
+   date_connaissance DATETIME,
+   is_transporte BOOLEAN,
+   is_interne BOOLEAN,
+   is_new BOOLEAN,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_utilisateur) REFERENCES utilisateur(Id),
+   FOREIGN KEY(Id_mode_information) REFERENCES mode_information(Id),
+   FOREIGN KEY(Id_fonction) REFERENCES fonction(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE equipement_rapport(
+   Id INT AUTO_INCREMENT,
+   Id_rapport INT,
+   Id_equipement INT,
+   is_necessaire BOOLEAN,
+   is_utilise BOOLEAN,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_equipement) REFERENCES equipement(Id)
+);
+
+CREATE TABLE utilisateur_action(
+   Id INT AUTO_INCREMENT,
+   Id_utilisateur INT,
+   Id_fonction INT,
+   Id_action INT,
+   commentaire TEXT,
+   is_new BOOLEAN,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_utilisateur) REFERENCES utilisateur(Id),
+   FOREIGN KEY(Id_fonction) REFERENCES fonction(Id),
+   FOREIGN KEY(Id_action) REFERENCES action(Id)
+);
+
+CREATE TABLE rapport_secours(
+   Id INT AUTO_INCREMENT,
+   Id_rapport INT,
+   Id_secours INT,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id ),
+   FOREIGN KEY(Id_secours) REFERENCES secours(Id )
+);
+
+CREATE TABLE rapport_materiel(
+   Id INT AUTO_INCREMENT,
+   Id_rapport INT,
+   Id_materiel INT,
+   mode_exploitation VARCHAR(255),
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_materiel) REFERENCES materiel(Id)
+);

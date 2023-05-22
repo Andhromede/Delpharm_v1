@@ -1,0 +1,13 @@
+.test{
+    margin-bottom: -0.6em;
+}
+
+.border-left{
+    /* border-left: 2px solid #0D6EFD; */
+    border-left: 2px solid grey;
+}
+
+.placeholderTxt{
+    font-size: 0.9em;
+    /* font-style: italic; */
+}

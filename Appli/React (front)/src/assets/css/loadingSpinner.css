@@ -1,0 +1,14 @@
+/************************ SPINER *************************/
+    main{
+        height: 100%;
+        margin-top: -56px;
+        padding-top: 56px;
+    }
+
+    .spinner{
+        position: absolute;
+        margin: auto;
+        margin-top:calc(50vh - 56px);
+        margin-left: 43%;
+        transform: translateY(-50%);
+    }

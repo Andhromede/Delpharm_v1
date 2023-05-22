@@ -1,0 +1,85 @@
+.classeASupprimerParLaSuite {
+    min-height: 9em;
+    font-size: 5em !important;
+    color: var(--blanc);
+}
+
+.formRadius {
+    border-radius: 22% 78% 17% 83% / 72% 20% 80% 28% !important;
+    padding-left: 3em;
+    height: 89em;
+    padding-top: 4em;
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.borderRadiusModal {
+    border-radius: 22% 78% 17% 83% / 72% 20% 80% 28% !important;
+    padding-left: 2em;
+    height: 47em;
+    padding-top: 7em;
+
+}
+
+.buttonFooter {
+    padding-bottom: 9em;
+}
+
+.buttonAccount {
+    border-radius: 2em;
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+    letter-spacing: 0.1em;
+    transition: 0.8s;
+}
+
+.buttonAccount:hover {
+    box-shadow: inset 5px 5px 5px rgb(85, 85, 85);
+}
+
+/* -------------------
+Media Queries
+-------------------- */
+@media screen and (min-width: 1900px) {
+    h4 {
+        margin: 0px 0px 10px 50px;
+    }
+
+    .buttonAccount {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .formRadius {
+        border-radius: 22% 78% 17% 83% / 72% 20% 80% 28% !important;
+        padding-left: 5em;
+        max-height: 60em;
+        padding-top: 4em;
+    }
+
+    .buttonAccount {
+        margin: 20px 0px 10px 70px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .formRadius {
+        border-radius: 22% 78% 17% 83% / 72% 20% 80% 28% !important;
+        padding-left: 5em;
+        height: 89em;
+        padding-top: 4em;
+    }
+
+    .buttonAccount {
+        margin: 20px 20px 10px 0px !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .formRadius {
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0% !important;
+        padding-right: 2.5em;
+        height: 95em;
+        padding-top: 4em;
+    }
+}

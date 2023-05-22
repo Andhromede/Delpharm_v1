@@ -1,0 +1,74 @@
+======================================================================================================
+					 DELPHARM APPLICATION 
+======================================================================================================
+FRONT (REACT) :
+	Modules : 
+	- Bootstrap 5.1.3, 
+	- react-router-dom 6.3, 
+	- React Bootstrap 2.4.0, 
+	- react icons 4.4.0, 
+	- chart.js 3.8.0,			(pour les graphiques)
+	- react-chartsjs-2 4.2.0		(pour chart.js)
+
+
+BACK (ASP .NET Core 6) :
+	Nuggets:
+	- Microsoft.EntityFrameworkCore.Design 6.0.5,
+	- Pomelo.EntityFrameworkCore.MySql 6.0.1,
+	- Swashbuckle.AspNetCore 6.2.3,
+	- System.IdentityModel.Tokens.Jwt 6.19.0
+
+
+======================================================================================================
+					INSTRUCTIONS DE RECUPERATION : 
+======================================================================================================
+
+- Pour récuperer le projet REACT et installer tous les modules nécéssaire, tappez la commande "nmp install" dans la console de votre IDE.
+
+- Pour generer les models avec Instant API (.Net), en cas de modification de la bdd :
+  dotnet ef dbcontext scaffold "Server=localhost;User=root;Password=;Database=esacp" "Pomelo.EntityFrameworkCore.MySql" -o Models
+(ATTENTION : au besoin, ajouter --force à la fin de la commande pour ecraser les fichiers deja existant)
+
+
+======================================================================================================
+					COMPOSANTS particuliers (React) :
+======================================================================================================
+
+- <SelectForm> permet de créer dynamiquement des selects (nécéssite de lui passer un tableau de données)
+- <SelectAutoComplete> composant caché qui apparait/disparait pour permettre l'autocompletion de certains inputs (nécéssite également un tableau de données). 
+- <InputForm> crée des inputs, boutons radio ou checkbox (au choix).
+- <TextAreaForm> permet de créer les textArea.
+
+- <LogForm> permet l'inscription et la connexion.
+- <ButtonCard> est le composant contenant les bulles de la page d'accueil.
+- Les 7 <FormAccident> sont des composants appelés dans les vues de déclaration d'accident interne/externe et permettant un rendu visuel de type caroussel.
+- <LoadingSpinner> est optionnel mais permet d'afficher un spinner lors des chargement de routes (utilisés dans App.js).
+
+
+======================================================================================================
+					A FAIRE :
+======================================================================================================
+
+SECURITE :
+   - Sécurisation des routes,
+   - Implémenter un captcha a l'inscripion,
+   - Panneau d'administration,
+   - Insertion des employés en BDD a partir d'un fichier excel,
+
+GRAPHIQUES :
+   - Dynamisme des graphiques(mois/3mois/6mois/12mois) + pyramide par service,
+   - Possibilité d'impression des différents graphiques,
+
+DIVERS :
+   - Version imprimables des différentes déclarations,
+   - Ajouter la possibilité de pièces jointes dans les rapport,
+   - Enregistrement des rapports en BDD,
+   - Pages réstantes à faire : mes rapports / mes actions / plan d'action AT / mes stats / creer plan d'action / plan d'action PQA / mes rapports,
+   - Diagrammes de classes,
+   - Envoi par mail des nouveaux rapports aux responsable HSE (jour/semaine/mois)
+
+
+
+
+
+

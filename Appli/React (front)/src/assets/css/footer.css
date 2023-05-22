@@ -1,0 +1,9 @@
+/* ------------------------------------------------------------------FOOTER-------------------------------------------------------------------- */
+.footer{
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+    text-align: center;
+    margin-top: 10em;
+    color: var(--gris);
+    padding: 25px 0px 25px 0px;
+    background-color: var(--background);
+  }

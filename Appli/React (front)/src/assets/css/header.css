@@ -1,0 +1,74 @@
+/* ------------------------------------------------------------------HEADER-------------------------------------------------------------------- */
+.title{
+    font-family: 'berlin-sans-fb-demi-bold', sans-serif;
+    text-align: center;
+    font-size:4.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    color: var(--gris);
+    background-color: var(--background);
+    letter-spacing: 0.1em;
+  }
+
+  .logo{
+    width: 1em;
+    height: 1em;
+    margin: 0em 0em 0.2em 1em;
+  }
+
+  /* ------------------------------------------------------------------NAVBAR-------------------------------------------------------------------- */
+  .icons{
+    color: var(--gris)!important;
+    border: 2px solid #f8f9fa;
+    border-radius: 50%;
+    font-size: 0.3em;
+    margin: -0.2em 0.4em -0.2em 0.4em;
+    padding: 0.1em 0.4em 0.1em 0.4em;
+    transition: 0.3s;
+  }
+  .icons:hover{
+    border: 2px solid var(--gris);
+    border-radius: 50%;
+    font-size: 0.3em;
+    margin: -0.2em 0.4em -0.2em 0.4em;
+    padding: 0.1em 0.4em 0.1em 0.4em;
+  }
+
+.nav{
+  margin-bottom: -33px!important;
+  font-size:1.3em;
+}
+  /* -------------------
+Media Queries
+-------------------- */
+
+@media screen and (max-width: 1024px) {   
+  .title{
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 585px) {   
+  .title{
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 450px) {     
+  .title{
+    font-size: 3em;
+  }
+  .icons{
+    color: var(--gris)!important;
+    font-size: 0.5em;
+    margin: -0.2em 0.4em -0.2em 0.4em;
+    padding: 0.1em 0.4em 0.1em 0.4em;
+    transition: 0.3s;
+    border: none;
+  }
+  .icons:hover{
+    color: var(--vert)!important;
+    font-size: 0.5em;
+    margin: -0.2em 0.4em -0.2em 0.4em;
+    padding: 0.1em 0.4em 0.1em 0.4em;
+    border: none;
+  }
+}

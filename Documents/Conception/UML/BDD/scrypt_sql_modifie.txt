@@ -1,0 +1,326 @@
+CREATE TABLE role(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE poste(
+   Id INT IDENTITY,
+   nom VARCHAR(255) NOT NULL,
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE csp(
+   Id INT IDENTITY,
+   nom VARCHAR(255) NOT NULL,
+   acronyme VARCHAR(50),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE siegeLesion(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE fonction(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE departement(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE contrat(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE equipement(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE traumatisme(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE type(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE typeAT(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE etat(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE criticite(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE priorite(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE secours(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_interne BIT,
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE mode_information(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE materiel(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   is_deleted BIT,
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE cote(
+   Id INT IDENTITY,
+   nom VARCHAR(50),
+   acronyme VARCHAR(50),
+   PRIMARY KEY(Id)
+);
+
+CREATE TABLE service(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   acronyme VARCHAR(50),
+   is_interne BIT,
+   is_deleted BIT,
+   Id_departement INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_departement) REFERENCES departement(Id)
+);
+
+CREATE TABLE rapport(
+   Id INT IDENTITY,
+   date_accident DATETIME2,
+   date_rapport DATETIME2,
+   motif_deplacement VARCHAR(max),
+   description_situation VARCHAR(max),
+   action_immediate VARCHAR(max),
+   occupation_victime VARCHAR(max),
+   comment VARCHAR(max),
+   pourquoi VARCHAR(max),
+   lieu VARCHAR(255),
+   materiel VARCHAR(max),
+   is_retour_poste BIT,
+   is_travail_leger BIT,
+   is_DU BIT,
+   is_RDP BIT,
+   is_rapport_police BIT,
+   is_deleted BIT,
+   Id_etat INT NOT NULL,
+   Id_type INT,
+   Id_service INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_etat) REFERENCES etat(Id),
+   FOREIGN KEY(Id_type) REFERENCES type(Id),
+   FOREIGN KEY(Id_service) REFERENCES service(Id)
+);
+
+CREATE TABLE action(
+   Id INT IDENTITY,
+   titre VARCHAR(255),
+   date_creation DATETIME2,
+   description VARCHAR(max),
+   reponse VARCHAR(max),
+   validation_hse DATETIME2,
+   validation_pilote DATETIME2,
+   validation_porteur DATETIME2,
+   delai DATETIME2,
+   is_immediate BIT,
+   is_deleted BIT,
+   Id_action_1 INT,
+   Id_priorite INT NOT NULL,
+   Id_criticite INT NOT NULL,
+   Id_etat INT NOT NULL,
+   Id_rapport INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_action) REFERENCES action(Id),
+   FOREIGN KEY(Id_priorite) REFERENCES priorite(Id),
+   FOREIGN KEY(Id_criticite) REFERENCES criticite(Id),
+   FOREIGN KEY(Id_etat) REFERENCES etat(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE fichier(
+   Id INT IDENTITY,
+   nom VARCHAR(255),
+   chemin VARCHAR(255),
+   is_deleted BIT,
+   Id_rapport INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE ficheSante(
+   Id INT IDENTITY,
+   date_creation DATETIME2,
+   debut_AT DATETIME2,
+   fin_AT DATETIME2,
+   duree_AT INT,
+   date_revision DATETIME2,
+   medecin_travail VARCHAR(50),
+   proposition_medecin VARCHAR(max),
+   is_suivis BIT,
+   is_deleted BIT,
+   Id_rapport INT NOT NULL,
+   Id_typeAT INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_typeAT) REFERENCES typeAT(Id)
+);
+
+CREATE TABLE rapport_trauma(
+   Id INT IDENTITY,
+   Id_cote INT NOT NULL,
+   Id_siegeLesion INT NOT NULL,
+   Id_traumatisme INT NOT NULL,
+   Id_rapport INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_cote) REFERENCES cote(Id),
+   FOREIGN KEY(Id_siegeLesion) REFERENCES siegeLesion(Id),
+   FOREIGN KEY(Id_traumatisme) REFERENCES traumatisme(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE utilisateur(
+   Id INT IDENTITY,
+   matricule VARCHAR(255) NOT NULL,
+   sexe VARCHAR(50),
+   nom VARCHAR(255) NOT NULL,
+   prenom VARCHAR(255) NOT NULL,
+   email VARCHAR(255) NOT NULL,
+   password VARCHAR(255) NOT NULL,
+   telephone VARCHAR(15),
+   date_naissance DATETIME2 NOT NULL,
+   is_actif BIT,
+   is_UAP BIT,
+   is_chef BIT,
+   is_deleted BIT,
+   Id_service INT NOT NULL,
+   Id_contrat INT NOT NULL,
+   Id_csp INT NOT NULL,
+   Id_poste INT NOT NULL,
+   Id_role INT NOT NULL,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_service) REFERENCES service(Id),
+   FOREIGN KEY(Id_contrat) REFERENCES contrat(Id),
+   FOREIGN KEY(Id_csp) REFERENCES csp(Id),
+   FOREIGN KEY(Id_poste) REFERENCES poste(Id),
+   FOREIGN KEY(Id_role) REFERENCES role(Id)
+);
+
+CREATE TABLE rapport_utilisateur(
+   Id INT IDENTITY,
+   Id_utilisateur INT,
+   Id_mode_information INT,
+   Id_fonction INT,
+   Id_rapport INT,
+   commentaire VARCHAR(max),
+   is_analyse_a_chaud BIT,
+   date_validation DATETIME2,
+   is_intervenu BIT,
+   date_connaissance DATETIME2,
+   is_transporte BIT,
+   is_interne BIT,
+   is_new BIT,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_user) REFERENCES utilisateur(Id),
+   FOREIGN KEY(Id_mode_information) REFERENCES mode_information(Id),
+   FOREIGN KEY(Id_fonction) REFERENCES fonction(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id)
+);
+
+CREATE TABLE equipement_rapport(
+   Id INT IDENTITY,
+   Id_rapport INT,
+   Id_equipement INT,
+   is_necessaire BIT,
+   is_utilise BIT,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_equipement) REFERENCES equipement(Id)
+);
+
+CREATE TABLE utilisateur_action(
+   Id INT IDENTITY,
+   Id_utilisateur INT,
+   Id_fonction INT,
+   Id_action INT,
+   commentaire VARCHAR(max),
+   is_new BIT,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_user) REFERENCES utilisateur(Id),
+   FOREIGN KEY(Id_fonction) REFERENCES fonction(Id),
+   FOREIGN KEY(Id_action) REFERENCES action(Id)
+);
+
+CREATE TABLE rapport_secours(
+   Id INT IDENTITY,
+   Id_rapport INT,
+   Id_secours INT,
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_secours) REFERENCES secours(Id)
+);
+
+CREATE TABLE rapport_materiel(
+   Id INT IDENTITY,
+   Id_rapport INT,
+   Id_materiel INT,
+   mode_exploitation VARCHAR(255),
+   PRIMARY KEY(Id),
+   FOREIGN KEY(Id_rapport) REFERENCES rapport(Id),
+   FOREIGN KEY(Id_materiel) REFERENCES materiel(Id)
+);
